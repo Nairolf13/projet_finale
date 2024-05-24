@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Coding</title>
+    <link rel="stylesheet" href="../asset/css/style.css">
+    <script src="https://kit.fontawesome.com/f6177452b1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Learn Coding</h1>
+        <div class="dropdown">
+            <div class="dropbtn">
+                <label for="checkbox" class="btn"><img src="../asset/images/menu-burger-removebg-preview.png" alt=""></label>
+                <input type="checkbox" name="test" id="checkbox">
+                <nav id="myDropdown" class="dropdown-content">
+                    <ul>
+                        <li>
+                            <a href="../index.html">Accueil</a>
+                        </li>
+                        <li>
+                            <a href="./index2.html">HTML</a>
+                        </li>
+                        <li>
+                            <a href="./index3.html">CSS</a>
+                        </li>
+                        <li>
+                            <a href="./index4.html">JavaScript</a>
+                        </li>
+                        <li>
+                            <a href="#">PHP</a>
+                        </li>
+                        <li>
+                            <a href="./indexC.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="cour">
+            <h2 class="titlepage">Maîtriser PHP (Hypertext Preprocessor)</h2>
+            <article class="art1">
+                <div class="contentartright">
+                    <h3>Syntaxe de Base et Concepts Fondamentaux :</h3>
+                    <p class="p1">Apprendre la syntaxe de base de PHP est la première étape. Cela inclut la
+                        compréhension des éléments suivants :
+
+                        Déclaration de Script : Un script PHP commence et se termine par
+                        ?php ... ?>.
+                        Variables : Les variables en PHP commencent par un $ (par exemple, $variable).
+                        Types de Données : PHP supporte plusieurs types de données, dont les chaînes, les entiers, les
+                        flottants, les tableaux, et les objets.
+                        Constantes : Déclarer des constantes en utilisant la fonction define('NOM', 'valeur').
+                        Structures de Contrôle :
+                        Comprendre comment contrôler le flux de votre programme est essentiel.
+
+                        Conditions : if, else, elseif, switch.
+                        Boucles : for, while, do...while, foreach.
+                        Fonctions :
+                        Les fonctions sont des blocs de code réutilisables.
+
+                        Déclaration de Fonction : function nomDeLaFonction($param) { ... }
+                        Fonctions Anonymes et Closures : $variable = function($param) { ... };
+                    </p>
+                </div>
+                <img src="../asset/images/Syntaxephp.webp" alt="syntaxe php">
+            </article>
+            <article class="art2">
+                <div>
+                    <h3>Manipulation de Formulaires et Validation :</h3>
+                    <p>Gestion des Formulaires :
+                        PHP est souvent utilisé pour traiter les données des formulaires HTML.
+
+                        Méthodes POST et GET : Récupérer les données de formulaires via $_POST et $_GET.
+                        Validation des Entrées : Vérifier et valider les données entrantes pour éviter les erreurs et
+                        les failles de sécurité.
+                        Sanitisation : Nettoyer les entrées utilisateurs pour empêcher les attaques XSS et SQL
+                        injection.
+                        Sessions et Cookies :
+                        Gérer les données de session et les cookies pour maintenir les informations entre les pages.
+
+                        Sessions : session_start(), $_SESSION.
+                        Cookies : setcookie(), $_COOKIE.
+                    </p>
+                </div>
+            </article>
+            <article class="art3">
+                <div>
+                    <h3> Programmation Orientée Objet (POO) :</h3>
+                    <p>PHP supporte pleinement la programmation orientée objet.
+
+                        Classes et Objets : Définir des classes avec class et créer des objets avec new.
+                        Propriétés et Méthodes : Attribuer des propriétés et des méthodes aux classes.
+                        Visibilité : Utiliser public, private, et protected pour contrôler l'accès aux propriétés et
+                        méthodes.
+                        Héritage et Interfaces :
+                        L'héritage permet de créer des classes dérivées qui héritent des propriétés et méthodes d'une
+                        classe de base.
+
+                        Héritage : Utiliser le mot-clé extends.
+                        Interfaces : Définir des interfaces avec interface et les implémenter avec implements.
+                    </p>
+                </div>
+                <img src="../asset/images/poophp.webp" alt="poo php">
+            </article>
+            <article class="art4">
+                <div>
+                    <h3>Interaction avec les Bases de Données :</h3>
+                    <p>
+                        PHP permet de se connecter à différentes bases de données, notamment MySQL.
+
+                        PDO (PHP Data Objects) : Une interface d'accès à une base de données plus sécurisée et flexible.
+                        php
+                        Copier le code
+                        $pdo = new PDO('mysql:host=localhost;dbname=test', 'root', '');
+                        Requêtes SQL :
+                        Exécuter des requêtes SQL pour interagir avec la base de données.
+
+                        Requêtes Simples : SELECT, INSERT, UPDATE, DELETE.
+                        Requêtes Préparées : Utiliser des requêtes préparées pour sécuriser les interactions avec la
+                        base de données.
+                        php
+                        Copier le code
+                        $stmt = $pdo->prepare('SELECT * FROM users WHERE id = :id');
+                        $stmt->execute(['id' => $id]);
+                    </p>
+                </div>
+            </article>
+            <article class="art5">
+                <div>
+                    <h3>Sécurité et Bonnes Pratiques :</h3>
+                    <p>Il est crucial de suivre les meilleures pratiques de sécurité en PHP pour protéger votre
+                        application.
+                        Échapper les Entrées : Utiliser htmlspecialchars() pour échapper les données avant de les
+                        afficher.
+                        Prévention des Attaques SQL : Utiliser des requêtes préparées pour éviter les injections SQL.
+                        Gestion des Erreurs : Gérer correctement les erreurs et exceptions pour éviter de divulguer des
+                        informations sensibles.
+                        Bonnes Pratiques :
+                        Adopter des bonnes pratiques de développement pour écrire du code propre, maintenable et
+                        efficace.
+                        Normes de Codage : Suivre des normes de codage comme PSR (PHP Standard Recommendations).
+                        Commentaires et Documentation : Documenter votre code avec des commentaires clairs et utiliser
+                        PHPDoc pour générer une documentation structurée.
+                        Modularité : Organiser votre code en modules réutilisables et maintenir une séparation claire
+                        des responsabilités.
+                    </p>
+                </div>
+                <img src="../asset/images/securitephp.webp" alt="securité php">
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p>2024 © LearnCoding <br>Tous droits réservés</p>
+        </div>
+        <div class="logofooter">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="https://twitter.com/"
+                            target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://x-voyage.vercel.app"
+                            target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/dashboard" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>

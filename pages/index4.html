@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Coding</title>
+    <link rel="stylesheet" href="../asset/css/style.css">
+    <script src="https://kit.fontawesome.com/f6177452b1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Learn Coding</h1>
+        <div class="dropdown">
+            <div class="dropbtn">
+                <label for="checkbox" class="btn"><img src="../asset/images/menu-burger-removebg-preview.png" alt=""></label>
+                <input type="checkbox" name="test" id="checkbox">
+                <nav id="myDropdown" class="dropdown-content">
+                    <ul>
+                        <li>
+                            <a href="../index.html">Accueil</a>
+                        </li>
+                        <li>
+                            <a href="./index2.html">HTML</a>
+                        </li>
+                        <li>
+                            <a href="./index3.html">CSS</a>
+                        </li>
+                        <li>
+                            <a href="#">JavaScript</a>
+                        </li>
+                        <li>
+                            <a href="./index5.html">PHP</a>
+                        </li>
+                        <li>
+                            <a href="./indexC.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="cour">
+            <h2 class="titlepage">Pour devenir compétent en JavaScript</h2>
+            <article class="art1">
+                <div class="contentartright">
+                    <h3>Syntaxe de Base et Concepts Fondamentaux :</h3>
+                    <p class="p1">Apprendre la syntaxe de base de JavaScript est la première étape. Cela inclut la
+                        compréhension des éléments suivants :
+
+                        Variables : var, let, const.
+                        Types de Données : nombres, chaînes, booléens, objets, tableaux.
+                        Opérateurs : arithmétiques, d'affectation, de comparaison, logiques.
+                        Structures de Contrôle :
+                        Comprendre comment contrôler le flux de votre programme est essentiel.
+
+                        Conditions : if, else, else if, switch.
+                        Boucles : for, while, do...while.
+                        Fonctions :
+                        Les fonctions sont des blocs de code réutilisables.
+
+                        Déclaration de Fonction : function nomDeLaFonction(paramètres) { ... }
+                        Fonctions Anonymes et Fléchées : (paramètres) => { ... }
+                    </p>
+                </div>
+                <img src="../asset/images/syntaxeJS.webp" alt="syntaxe java script">
+            </article>
+            <article class="art2">
+                <div>
+                    <h3>Manipulation du DOM (Document Object Model) :</h3>
+                    <p>Sélection d'Éléments :
+                        JavaScript permet d'interagir avec le HTML et de manipuler le DOM.
+
+                        Méthodes de Sélection : getElementById, getElementsByClassName, querySelector, querySelectorAll.
+                        Modification du DOM :
+                        Une fois les éléments sélectionnés, vous pouvez les modifier.
+
+                        Changer le Contenu : element.textContent, element.innerHTML.
+                        Modifier les Styles : element.style.property = value.
+                        Ajouter/Supprimer des Éléments : element.appendChild, element.removeChild.
+                        Gestion des Événements :
+                        Réagir aux actions des utilisateurs est crucial pour créer des pages interactives.
+
+                        Ajout d'Événements : element.addEventListener('event', function).
+                        Types d'Événements : click, mouseover, keydown, submit.
+                    </p>
+                </div>
+            </article>
+            <article class="art3">
+                <div>
+                    <h3> Programmation Orientée Objet (POO) :</h3>
+                    <p>JavaScript est un langage orienté objet et il est essentiel de comprendre ses concepts.
+
+                        Objets : let obj = { clé: valeur, méthode() { ... } }.
+                        Constructeurs : function Constructeur(param) { this.propriété = param; }.
+                        Prototypes : Constructeur.prototype.méthode = function() { ... }.
+                        Classes (ES6) :
+                        Les classes fournissent une syntaxe plus claire pour créer des objets et des héritages.
+
+                        Déclaration de Classe : class NomDeLaClasse { constructor(param) { ... } méthode() { ... } }.
+                        Héritage : class SousClasse extends SuperClasse { constructor(param) { super(param); ... } }.
+                    </p>
+                </div>
+                <img src="../asset/images/poo.webp" alt="P.O.O">
+            </article>
+            <article class="art4">
+                <div>
+                    <h3>Programmation Asynchrone :</h3>
+                    <p>
+                        Les callbacks sont des fonctions passées en argument à d'autres fonctions.
+
+                        Syntaxe de Base : fonctionA(callback) { ... callback(); }.
+                        Promises :
+                        Les Promises sont utilisées pour gérer les opérations asynchrones.
+
+                        Création d'une Promise : let promise = new Promise((resolve, reject) => { ... });
+                        Utilisation de then et catch : promise.then(result => { ... }).catch(error => { ... });
+                        Async/Await :
+                        Async/Await simplifie l'écriture de code asynchrone.
+
+                        Déclaration de Fonction Async : async function nomDeLaFonction() { ... }
+                        Utilisation de await : let result = await promise;
+                    </p>
+                </div>
+            </article>
+            <article class="art5">
+                <div>
+                    <h3>Modules et Gestion de Projet :</h3>
+                    <p>Les modules permettent de diviser votre code en morceaux réutilisables.
+
+                        Exportation : export const variable = value; ou export default function() { ... }
+                        Importation : import { variable } from './module.js'; ou import nom from './module.js';
+                        Outils de Développement :
+                        Apprendre à utiliser les outils de développement est essentiel pour gérer des projets JavaScript
+                        plus complexes.
+
+                        Gestionnaire de Paquets : npm pour installer et gérer les dépendances.
+                        Bundlers : Webpack, Parcel pour combiner et optimiser votre code.
+                        Transpileurs : Babel pour convertir le code ES6+ en JavaScript compatible avec les anciens
+                        navigateurs.
+                    </p>
+                </div>
+                <img src="../asset/images/modulegestion.webp" alt="module de gestion">
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p>2024 © LearnCoding <br>Tous droits réservés</p>
+        </div>
+        <div class="logofooter">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="https://twitter.com/"
+                            target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://x-voyage.vercel.app"
+                            target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/dashboard" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
