@@ -233,7 +233,8 @@ footer {
 footer p {
   color: white;
   margin-left: 30px;
-  margin-bottom: 20px;
+  margin-top: 50px;
+
 }
 
 footer a {
@@ -246,6 +247,8 @@ footer nav ul {
   gap: 30px;
   list-style-type: none;
   margin-right: 30px;
+
+
 }
 
 /**Page html **/
@@ -254,7 +257,7 @@ footer nav ul {
   display: flex;
   justify-content: center;
   flex-direction: column;
-
+  padding: auto;
 }
 
 .cour h3 {
@@ -276,7 +279,7 @@ footer nav ul {
   justify-content: center;
   font-size: 50px;
   margin-top: 90px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 
@@ -284,36 +287,83 @@ footer nav ul {
   display: flex;
   top: px;
   align-items: center;
-  height:50px;
+  height: 50px;
 }
 
 
 .zoom-image {
-  width: 100px; /* Ajustez selon vos besoins */
-  animation: zoom-in-out 2s infinite alternate; /* Animation en boucle */
+  width: 100px;
+  animation: zoom-in-out 2s infinite alternate;
   margin: auto;
-  margin-top:-30px
+  margin-top: -30px
 }
 
 
 @keyframes zoom-in-out {
   from {
-      transform: scale(1); /* Taille normale */
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.dropdown-content ul li {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slideIn 0.5s forwards;
+}
+
+#checkbox:checked ~ .dropdown-content ul li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+#checkbox:checked ~ .dropdown-content ul li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+#checkbox:checked ~ .dropdown-content ul li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+#checkbox:checked ~ .dropdown-content ul li:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+#checkbox:checked ~ .dropdown-content ul li:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+#checkbox:checked ~ .dropdown-content ul li:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateX(100%);
   }
   to {
-      transform: scale(1.1); /* Zoom x1.5 */
+      opacity: 1;
+      transform: translateX(0);
   }
 }
 
 
-
 /**Page contact **/
+html {
+  margin: 0px
+}
+
 .mainform {
   background-color: rgb(245, 241, 236);
+
 }
 
 .bodyform {
   background-color: rgb(245, 241, 236);
+
 }
 
 .headerform {
@@ -379,16 +429,14 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .general {
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-top: 80px;
   margin-bottom: 50px;
-  margin-left: 50px;
-  padding-left: 10px;
 }
 
 .general img {
@@ -396,33 +444,21 @@ a {
 }
 
 .general a {
-  margin-top: 10px;
+  font-size: 18px;
 }
 
 .generalright {
   flex-wrap: wrap;
-  margin-left: 56px;
-}
-
-.generalleft p {
-  font-size: 15px;
-}
-
-.generalleft {
-  padding-left: 100px;
+  gap: 2rem
 }
 
 .call {
   display: flex;
 }
 
-.call a {
-  margin-top: 30px;
-}
-
 .localisation {
   display: flex;
-  margin-top: 50px;
+  align-items: center;
 }
 
 .mailto {
@@ -431,13 +467,10 @@ a {
 
 .social {
   display: flex;
-  margin-top: 50px;
-  margin-left: 2px;
 }
 
 .social p {
-  margin-top: 30px;
-  font-size: 25px;
+  font-size: 18px;
 }
 
 .maps {
@@ -445,21 +478,57 @@ a {
 }
 
 .maps img {
-  width: 80%;
-  height: 600px;
+  width: 70%;
+  height: 400px;
+  padding-bottom: 100px;
 }
 
 .form {
+  margin: auto;
+  margin-bottom: 80px;
+  align-items: center;
   text-align: center;
-  margin-bottom: 50px;
-  margin-top: 0px;
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 70px;
+  width: 300px;
+  height: 500px;
 }
 
 .form h2 {
   margin-top: 10px;
-  font-size: 30px;
+  font-size: 35px;
   justify-content: center;
-  margin-left: 60px;
+  margin-left: 50px;
+  text-decoration: underline;
+}
+
+.form h3 {
+  font-size: 20px;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+#name {
+  width: 200px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+  
+}
+
+#firstname {
+  width: 200px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+#message {
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 .presentation,
@@ -472,6 +541,18 @@ a {
 .btn {
   margin: 0px;
 }
+
+
+.btn-reset {
+  border: 2px solid color black;
+  border-radius: 20px;
+}
+
+.btn-save {
+  border: 2px solid color black;
+  border-radius: 20px;
+}
+
 
 .dropdown-content {
   right: 50px;
@@ -533,7 +614,7 @@ p {
   margin: 40px;
   display: flex;
   justify-content: space-between;
-  }
+}
 
 .art1 img {
   margin-top: 17px;
@@ -600,7 +681,6 @@ p {
 
 .art5 img {
   margin-top: 10px;
-  margin-right: 100px;
   height: 270px;
   width: 500px;
   margin-bottom: 20px;
@@ -610,15 +690,15 @@ p {
   .langages nav ul {
     flex-wrap: wrap;
     justify-content: center;
-    
+
   }
 
   .langages nav ul li {
-    width: calc(50% - 20px); 
-    margin-bottom: 20px; 
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
   }
 
-  .titlepage{
+  .titlepage {
     margin: auto;
     margin-top: 30px;
     text-align: center;
@@ -628,9 +708,9 @@ p {
   .zoom-image {
     height: 70px;
     margin-bottom: -50px;
-    
+
   }
-  
+
 }
 
 @media (min-width: 1px) and (max-width: 768px) {
@@ -641,6 +721,7 @@ p {
 
   header {
     height: 90px;
+    margin: auto;
   }
 
   .presentation h2 {
@@ -662,8 +743,8 @@ p {
   }
 
   .dropdown-content ul,
-  a {
-    color: rgb(0, 0, 0);
+  .dropdown-content a {
+    color: rgb(255, 255, 255);
     margin: auto;
     margin-top: 30px;
     font-size: 25px;
@@ -684,7 +765,7 @@ p {
   .descriptioninfo {
     flex-direction: column;
     height: 600px;
-    
+
   }
 
   .descriptioninfo h3 {
@@ -722,8 +803,7 @@ p {
     padding: 10px;
   }
 
-  header,
-  footer,
+
   .description,
   .langages,
   .infotuto,
@@ -775,19 +855,27 @@ p {
     padding: 20px;
   }
 
+  .information h2 {
+   justify-content: ;
+   font-size: 20px;
+   width: 50%;
+  }
+
   .maps img {
-    height: 300px;
     margin: auto;
   }
 
-  .art1 img, .art2 img, .art3 img,
-  .art4 img, .art5 img{
+  .art1 img,
+  .art2 img,
+  .art3 img,
+  .art4 img,
+  .art5 img {
     margin: auto;
     width: 80%;
     padding: 10px;
   }
 
-  .titlepage{
+  .titlepage {
     margin: auto;
     margin-top: 350px;
     text-align: center;
@@ -797,7 +885,28 @@ p {
   .zoom-image {
     height: 70px;
     margin-bottom: -60px;
-    
+
+  }
+
+  .social p{
+    margin-right: 100px;  }
+
+  .form{
+    width: 50%;
+  }
+
+  .general {
+    display: flex;
+    flex-direction: column;
+  }
+
+    #myDropdownform a{
+    color: black;
+    font-size: 20px;
   }
   
+
+  footer p{
+    margin-left: 0px;
+  }
 }
